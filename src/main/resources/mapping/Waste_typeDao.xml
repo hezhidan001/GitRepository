@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.dao.Waste_typeDao">
+  <select id="find" resultType="Waste_type">
+    select * from waste_type
+  </select>
+  <insert id="add" parameterType="Waste_type">
+    insert into waste_type values(null,#{name},#{code})
+  </insert>
+  <delete id="delete" parameterType="int">
+    delete from waste_type where type_id = #{id}
+  </delete>
+  <!-- 其它的指令略.... -->
+</mapper> 

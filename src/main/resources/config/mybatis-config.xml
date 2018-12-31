@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration  
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 其它的配置都移到Spring的配置文件中，所以这里只配置实体对象的别名 -->
+	<typeAliases>
+		<package name="com.icss.entity"/>
+	</typeAliases>	
+	<!-- 环境，映射文件的加载配置  都移到Spring配置文件中 -->
+</configuration>
