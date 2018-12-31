@@ -16,8 +16,6 @@ public class Waste_typeController {
 	// 自动注入了业务逻辑层对象
 	@Autowired
 	Waste_typeSerivce waste_typeSerivce;
-
-	
 	@RequestMapping("/list")
 	public ModelAndView list() {
 		List<Waste_type> list = waste_typeSerivce.find();
@@ -40,5 +38,10 @@ public class Waste_typeController {
 	public ModelAndView delete(int id) {
 		int result = waste_typeSerivce.delete(id);
 		return new ModelAndView("redirect:list");
+	}
+	@RequestMapping("edit")
+	public ModelAndView edit(int id) {
+		Waste_type waste_type = waste_typeSerivce.findById(id);
+		return new ModelAndView("wasterEdit");
 	}
 }

@@ -6,11 +6,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   <select id="find" resultType="Waste_type">
     select * from waste_type
   </select>
+  <select id="findById" parameterType="int">
+  	select * from waste_type where type_id=#{id}
+  </select>
   <insert id="add" parameterType="Waste_type">
     insert into waste_type values(null,#{name},#{code})
   </insert>
   <delete id="delete" parameterType="int">
     delete from waste_type where type_id = #{id}
   </delete>
+  <update id="update" parameterType="Waste_type">
+     update waste_type set name=#{name},code=#{code} where type_id=#{type_id}
+  </update>
   <!-- 其它的指令略.... -->
 </mapper> 
