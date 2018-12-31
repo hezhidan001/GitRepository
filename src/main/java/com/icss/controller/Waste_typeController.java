@@ -39,6 +39,7 @@ public class Waste_typeController {
 		int result = waste_typeSerivce.delete(id);
 		return new ModelAndView("redirect:list");
 	}
+	//这是编辑功能
 	@RequestMapping("edit")
 	public ModelAndView edit(int id) {
 		Waste_type waste_type = waste_typeSerivce.findById(id);
