@@ -17,6 +17,7 @@ public class Waste_typeController {
 	@Autowired
 	Waste_typeSerivce waste_typeSerivce;
 
+	
 	@RequestMapping("/list")
 	public ModelAndView list() {
 		List<Waste_type> list = waste_typeSerivce.find();
